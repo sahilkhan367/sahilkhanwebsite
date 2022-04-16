@@ -1,0 +1,39 @@
+.slideshow {
+    overflow: hidden;
+    height: 500px;
+    width: 728px;
+    margin: 0 auto;
+    }
+    .slide-wrapper {
+    width: 3000px;
+    animation: slide 18s infinite;
+    }
+    .image-container{
+    margin-top: 50px;
+    margin-left: 0;
+    margin: right 1px;; ;
+    float: left;
+    height: 500px;
+    width: 728px;
+    }
+    .image-container:nth-child(1) {
+    background-image: url("https://th.bing.com/th/id/R.01ae2cd62eb88d36fc69ad0912ae5395?rik=P%2bzl6G7TimJbWQ&riu=http%3a%2f%2fwww.centralgatech.edu%2fwp-content%2fuploads%2f2017%2f08%2fprogramming.jpeg&ehk=0xEzN%2blDtzcIuibJYJpAOLNClKvtdfLcLjQqk%2fcWeJE%3d&risl=&pid=ImgRaw&r=0") ;
+    }
+    .image-container:nth-child(2) {
+    background-image: url("https://th.bing.com/th/id/OIP.IKZ2l4B5_p1zjoSkq-5e7QHaEa?pid=ImgDet&w=644&h=384&rs=1") ;
+    }
+    .image-container:nth-child(3) {
+    background-image: url("https://th.bing.com/th/id/OIP.12OfuCIRwAKnb3hgoqaKmgHaE7?pid=ImgDet&rs=1") ;
+    }
+    .image-container:nth-child(4) {
+    background-image: url("https://th.bing.com/th/id/R.ee7abb97c81e5582bf3f75ed800cc3a5?rik=5I09DHBxsTLq3w&riu=http%3a%2f%2favante.biz%2fwp-content%2fuploads%2fBest-hacker-wallpapers%2fBest-hacker-wallpapers9.jpg&ehk=9g4jf2tg%2bqnHbibbofSFWZyZ3VusVAMOM40bO4LBK0s%3d&risl=&pid=ImgRaw&r=0") ;
+    }
+    @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    70% {margin-left: -1456px;}
+    80% {margin-left: -2184px;}
+    90% {margin-left: -2184px;}
+    }
