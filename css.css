@@ -79,8 +79,8 @@ button:hover::after, button:focus::after {
     opacity: 1;
   }
   100% {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     opacity: 0;
   }
 }
