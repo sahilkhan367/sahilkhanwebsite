@@ -61,8 +61,8 @@ button::after {
   border: 6px solid #00FFCB;
   position: absolute;
   z-index: -1;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 20%;
   transform: translate(-50%, -50%);
   animation: ring 1.5s infinite;
 }
