@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 LED Control</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>ESP32 LED Control</h1>
+  <button id="ledOn">Turn LED ON</button>
+  <button id="ledOff">Turn LED OFF</button>
+  <p id="status">LED Status: Unknown</p>
+
+  <script>
+    const apiUrl = "http://10.80.5.233/toggle"; // Replace <ESP32_IP_ADDRESS> with the ESP32's IP
+
+    document.getElementById("ledOn").addEventListener("click", () => {
+      fetch(`${apiUrl}?state=on`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            document.getElementById("status").innerText = "LED Status: ON";
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    document.getElementById("ledOff").addEventListener("click", () => {
+      fetch(`${apiUrl}?state=off`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            document.getElementById("status").innerText = "LED Status: OFF";
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
+</body>
+</html>
